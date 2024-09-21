@@ -1,0 +1,106 @@
+
+  ============================================
+    Manually Setup Webpack and Babel To Use RTL
+  ============================================
+
+1. Scroll down to REACT With Babel:
+     npm install --save-dev @babel/preset-react
+     add in babel.rc: 
+        "@babel/preset-react"
+     Add to webpack.config:
+        Add to rules section:
+           test: /\.(js|jsx)$/,     
+        add to resolve section:
+          extensions: ['*', '.js', '.jsx'],
+     That's it:
+
+ 2. Scroll down to "React with web pack"
+     npm install --save react react-dom
+
+    In your src/index.js, you can implement your entry point into the React world:
+          import React from 'react';
+          import ReactDOM from 'react-dom';
+
+          const title = 'React with Webpack and Babel';
+
+          ReactDOM.render(
+            <div>{title}</div>,
+            document.getElementById('app')
+          );
+
+        The React DOM API takes two arguments. Whereas the first argument is 
+     the rendered JSX from React, the second argument is the HTML element 
+     where it should be integrated into the DOM. Since it expects an HTML 
+     element identified by an id attribute, we need to add this element in 
+     our dist/index.html file:
+
+         <div id="app"></div>
+     
+     Start your application: npm start
+
+3. Scroll to Hot Module Replacement in React:  
+     npm install --save-dev react-hot-loader
+        
+     Second, add the configuration to your webpack.config.js file:
+       const webpack = require('webpack');
+       plugins: [new webpack.HotModuleReplacementPlugin()],
+       add in devServer Section:
+          hot: true,
+
+        Third in the src/index.js file, you have to define that hot 
+     reloading is available and should be used. Add:
+         module.hot.accept();
+     
+        Last but not least, create your first React component. 
+     In your src/index.js file, import a not yet defined App component:
+
+     Then create App.js in .\src and the following content:
+           import React from 'react';
+
+          const App = ({ title }) =>
+            <div>{title}</div>;
+
+          export default App;
+
+    Congratulations, you have created your first function component and passed props to it. 
+    That's it for a minimal React setup with Babel and Webpack.
+    
+
+1. Tutorial:Testing Library
+    -  https://www.robinwieruch.de/react-testing-library/
+             
+       Scroll down to: "React Testing Library: Rendering a Component"
+
+
+
+
+ 2. After testing above scroll down a little bit more and click 
+     "Continue Reading: Testing React Components with React Testing Library"
+     This will take you back to "https://www.robinwieruch.de/react-testing-library/"
+  
+  8. Read this link again and go to "Custom React Setup" to setup JEST 
+     and React Testing Library" yourself.  
+        - you can download a React Boilerplate project from 
+          github https://github.com/rwieruch/minimal-react-webpack-babel-setup.
+          This boiler project has already webpack and babel setup. But dont use it.
+          Create your own React project using create-react-app and set it up yourself.
+       
+     STEP1:
+        npx create-react-app manually-setup-react-app
+          
+        Bring up code in VS Studio Code and understand the project files:
+        A good reference in pluralsight in React is:
+           https://app.pluralsight.com/ilx/video-courses/clips/a028fa58-7f10-4613-9d46-0b4885bba5a7          
+    
+ 
+     STEP2: Install important extensions"
+          npm install -g prettier
+          go to VSCode and install "Prettier Code Formatter" and "Prettier Eslint" extensions
+
+     STEP3: React With Babel- https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-babel
+         npm install --save-dev @babel/preset-react
+        
+
+     STEP4: React with Webpack
+
+     STEP5: Hot Module Replacement

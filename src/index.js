@@ -1,6 +1,12 @@
-console.log('Hello Webpack Project Setup Manually.');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const handleDeleteRecord = () => {
-    console.log(`Item being deleted =  Button was clicked`);
-   
-  };
+const title = 'React with Webpack and Babel';
+
+ReactDOM.render(
+  <div>{title}</div>,
+  document.getElementById('app')
+);
+
+module.hot.accept();
