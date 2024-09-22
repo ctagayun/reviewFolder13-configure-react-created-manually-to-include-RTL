@@ -2,6 +2,7 @@
   ============================================
     Manually Setup Webpack and Babel To Use RTL
   ============================================
+go to https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-babel
 
 1. Scroll down to REACT With Babel:
      npm install --save-dev @babel/preset-react
@@ -14,7 +15,7 @@
           extensions: ['*', '.js', '.jsx'],
      That's it:
 
- 2. Scroll down to "React with web pack"
+2. Scroll down to "React with web pack"
      npm install --save react react-dom
 
     In your src/index.js, you can implement your entry point into the React world:
@@ -65,15 +66,55 @@
     Congratulations, you have created your first function component and passed props to it. 
     That's it for a minimal React setup with Babel and Webpack.
     
+================================================
+4. SETUP REACT TESTING LIBRARY
+  
+       After the setting up in Jest or Vitest, you will learn how to render a 
+   React component in a test with React Testing Library. We will use 
+   the following function component called App component from a src/App.js file:
 
-1. Tutorial:Testing Library
-    -  https://www.robinwieruch.de/react-testing-library/
-             
-       Scroll down to: "React Testing Library: Rendering a Component"
+    - go to https://www.robinwieruch.de/react-testing-library/ and scroll down 
+                 
+    - Scroll down to: "React Testing Library: Rendering a Component"
 
 
+    STEP1. Let's read up about React Function Components
+          https://www.robinwieruch.de/react-function-component/
+
+          React Function Components -- also known as React Functional Components --
+       are the status quo of writing modern React applications. In the past, 
+       there have been various React Component Types, but with the introduction
+       of React Hooks it's possible to write your entire application with just 
+       functions as React components. (Do a separate demo project later)
+
+         This in-depth guide shows you everything about React Function Components.
+       Study it well. 
+
+    STEP2. After reading up about function components, go back to  
+        - go to https://www.robinwieruch.de/react-testing-library/ 
+         and scroll down to: "React Testing Library: Rendering a Component"
+    
+        - copy code to App.js (see comments in App.js)
 
 
+        - create src/App.test.js and the following:
+               import * as React from 'react';
+                  import { render, screen } from '@testing-library/react';
+
+                  import App from './App';
+
+                  describe('App', () => {
+                  it('renders App component', () => {
+                     render(<App />);
+
+                     screen.debug();
+                  });
+                  }); 
+            See comments in App.test.js
+
+         
+
+    
  2. After testing above scroll down a little bit more and click 
      "Continue Reading: Testing React Components with React Testing Library"
      This will take you back to "https://www.robinwieruch.de/react-testing-library/"

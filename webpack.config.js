@@ -26,7 +26,8 @@ module.exports = {
     static: path.resolve(__dirname, "./dist"),
   },
   //4
-  plugins: [new ESLintPlugin()], plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [new ESLintPlugin()], 
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   
 };
 
