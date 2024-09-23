@@ -1,7 +1,7 @@
 
-  ============================================
+============================================
     Manually Setup Webpack and Babel To Use RTL
-  ============================================
+ ============================================
 go to https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-babel
 
 1. Scroll down to REACT With Babel:
