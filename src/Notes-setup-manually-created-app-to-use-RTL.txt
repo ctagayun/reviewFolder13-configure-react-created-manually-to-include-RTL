@@ -88,14 +88,13 @@ go to https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-
        functions as React components. (Do a separate demo project later)
 
          This in-depth guide shows you everything about React Function Components.
-       Study it well. 
+       Study it well. We will tackle this later in:
+
+         reviewFolder14-this-folder-is-all-about-function-components
 
     STEP2. After reading up about function components, go back to  
         - go to https://www.robinwieruch.de/react-testing-library/ 
          and scroll down to: "React Testing Library: Rendering a Component"
-    
-        - copy code to App.js (see comments in App.js)
-
 
         - create src/App.test.js and the following:
                import * as React from 'react';
@@ -112,7 +111,12 @@ go to https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-
                   }); 
             See comments in App.test.js
 
-         
+         - copy code to App.js. The great thing about it, React Testing Library 
+           doesn't care much about the actual components. Let's take the following 
+           React components which utilize different React features (useState, event handler, props) 
+           and concepts (controlled component):
+
+
 
     
  2. After testing above scroll down a little bit more and click 

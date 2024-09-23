@@ -1,10 +1,6 @@
+import React from 'react';
 
-import * as React from 'react';
+const App = ({ title }) =>
+  <div>{title}</div>;
 
-const title = 'Hello React - Will test this is App.test.js';
-
-function App() {
-  return <div>{title}</div>;
-}
-
-export default App;
+export default App;npm 

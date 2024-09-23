@@ -7,7 +7,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/, 
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
@@ -24,6 +24,7 @@ module.exports = {
   // 3
   devServer: {
     static: path.resolve(__dirname, "./dist"),
+    hot: true,
   },
   //4
   plugins: [new ESLintPlugin()], 
